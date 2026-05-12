@@ -21,6 +21,7 @@
   "homepage": "https://github.com/23Rasmi/cycle---store#readme",
   "dependencies": {
     "express": "^5.2.1",
+    "pdfkit": "^0.18.0",
     "sqlite3": "^5.1.6"
   }
 }
