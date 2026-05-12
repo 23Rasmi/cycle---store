@@ -1,0 +1,8 @@
+{
+  "name": "Biswakarma Store",
+  "short_name": "CycleStore",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
