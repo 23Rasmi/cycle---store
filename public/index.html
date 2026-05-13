@@ -918,6 +918,9 @@ button:active{
 /* ===== CUSTOMER CARD ===== */
 
 .customerCard{
+width:100%;
+overflow: hidden;
+
   background:#ffffff;
   border-radius:22px;
   padding:18px;
@@ -929,7 +932,26 @@ button:active{
   transition:0.25s;
   border:1px solid #eef2ff;
 }
+.customerHeader{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
 
+.customerName{
+  word-break:break-word;
+  font-size:20px;
+}
+.actionButtons{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width:100%;
+}
+
+.actionButtons button{
+  width:100%;
+}
 .customerCard:hover{
   transform:translateY(-3px);
   box-shadow:
@@ -4101,7 +4123,81 @@ min-width:100%;
 
 }
 
+@media (max-width: 768px) {
 
+  body{
+    padding: 10px;
+  }
+
+  .container{
+    width: 100%;
+    padding: 10px;
+  }
+
+  input, button{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  table{
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .card{
+    width: 100%;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .customerCard{
+    padding:15px;
+  }
+
+  .customerName{
+    font-size:18px;
+  }
+
+  .customerHeader{
+    align-items:flex-start;
+  }
+
+  .actionButtons{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .actionButtons{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width:100%;
+}
+
+}
+@media(max-width:600px){
+
+  .actionButtons{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+  }
+
+  .actionButtons button{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+  }
+
+  button{
+    width:100%;
+    max-width:100%;
+  }
+
+}
 
 </style>
 
@@ -4109,6 +4205,7 @@ min-width:100%;
 </head>
 
 <body>
+  
 
   <div class="header">
   BISWAKARMA CYCLE STORE
@@ -4147,6 +4244,15 @@ History
 
 <!-- DASHBOARD -->
 <div id="dashboard" class="section active">
+  <div class="summary">
+  <h2>Shop Summary</h2>
+
+  <p>Total Customers: <span id="totalCustomers">0</span></p>
+
+  <p>Total Pending: ₹<span id="totalPending">0</span></p>
+
+  <p>Total Collection: ₹<span id="totalCollection">0</span></p>
+</div>
 <div class="cardBox">
 <div class="card"><div class="cardTitle">Today Sales</div><div id="todaySales" class="cardValue">0</div></div>
 <div class="card"><div class="cardTitle">Today Amount</div><div id="todayAmount" class="cardValue">₹0</div></div>

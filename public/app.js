@@ -1385,3 +1385,17 @@ window.addEventListener("load", function(){
   },700);
 
 });
+
+let totalPending = 0;
+let totalCollection = 0;
+
+customers.forEach(c => {
+  totalPending += Number(c.remaining || 0);
+  totalCollection += Number(c.total || 0);
+});
+
+document.getElementById("totalPending").innerText = totalPending;
+
+document.getElementById("totalCollection").innerText = totalCollection;
+
+document.getElementById("totalCustomers").innerText = customers.length;
