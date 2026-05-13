@@ -920,6 +920,7 @@ button:active{
 .customerCard{
 width:100%;
 overflow: hidden;
+box-sizing: border-box;
 
   background:#ffffff;
   border-radius:22px;
@@ -933,13 +934,16 @@ overflow: hidden;
   border:1px solid #eef2ff;
 }
 .customerHeader{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+gap:10px;
 }
 
 .customerName{
   word-break:break-word;
+  max-width: 100%;
   font-size:20px;
 }
 .actionButtons{
