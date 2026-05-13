@@ -972,13 +972,16 @@ gap:10px;
 /* ===== BUTTONS ===== */
 
 .customerBtns{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:12px;
+display:grid;
+grid-template-columns:1fr;
+gap:12px;
+margin-top:12px;
+width:100%;
 }
 
 .customerBtns button{
+  width: 100%;
+  box-sizing: border-box;
 
   flex:1;
   min-width:90px;
